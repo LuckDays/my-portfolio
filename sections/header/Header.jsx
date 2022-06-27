@@ -12,6 +12,7 @@ export default function Header() {
     }, [])
 
     function themeChanger() {
+        
         if(!mounted) return null;
 
         const currentTheme = theme === 'system' ? systemTheme : theme;
@@ -38,7 +39,7 @@ export default function Header() {
     return(
         <header className="fixed flex flex-row h-fit w-full border-b-2 border-gray-300 dark:border-gray-800 items-center justify-around p-3 bg-black dark:bg-gray-700 bg-opacity-5">
             <div>
-                <Link href={'/'}><a className='text-4xl'>Lucas S. Dias</a></Link>
+                <Link href={'/'}><a className='text-4xl cursor-default'>Lucas S. Dias</a></Link>
             </div>
             <div className='space-x-5'>
                 <Link href={'#about'}><Button>Sobre mim</Button></Link>
